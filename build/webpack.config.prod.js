@@ -5,7 +5,7 @@
 var path = require("path");
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-var projectRoot = path.resolve(__dirname, '../')
+var projectRoot = path.resolve(__dirname, '../src/')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
     devtool: 'source-map',
@@ -36,7 +36,7 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                include: /app/,
+                include: /src/,
                 exclude: /node_modules/,
                 loader: "babel-loader"
             },
